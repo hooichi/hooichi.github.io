@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>中国大学别称谜底游戏</title>
+	<meta charset="UTF-8">
+	<!-- 加载 Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+	<h1 style="text-align: center;color:midnightblue"><b>中国大学别称谜底游戏</b></h1>
+	<p style="text-align: center;color:midnightblue"><b>根据以下的别称，猜出中国大学的真实名称</b></p>
+	<p style="text-align:center;color:midnightblue">想要提示可以点击旁边<b>tips</b>的按钮</1>
+	<div id="questions">
+		<div style="text-align:center;">
+		<p style="color:midnightblue">1. 圆明园职业技术学院</p>
+		<input id="answer1" type="text">
+		<button onclick="showHint('hint1')"style="text-align: center;">tips</button>
+			<p id="hint1" style="display:none;text-align:center">这所大学拥有“未名湖”</p>
+		<p style="color:midnightblue">2. 五道口职业技术学院</p>
+		<input id="answer2" type="text">
+		<button onclick="showHint('hint2')"style="text-align: center;">tips</button>
+			<p id="hint2" style="display:none">和第一所大学是邻居</p>
+		<p style="color:midnightblue">3. 海底捞大学</p>
+		<input id="answer3" type="text">
+		<button onclick="showHint('hint3')">tips</button>
+			<p id="hint3" style="display:none">这所大学也被称之为“广院”</p>
+		<p style="color:midnightblue">4. 上海市第一建筑施工队</p>
+		<input id="answer4" type="text">
+		<button onclick="showHint('hint4')">tips</button>
+			<p id="hint4" style="display:none">这所大学以土木工程闻名</p>
+		<p style="color:midnightblue">5. 双鸭山大学</p>
+		<input id="answer5" type="text">
+		<button onclick="showHint('hint5')">tips</button>
+		  <p id="hint5" style="display:none">这所大学是孙中山先生创办的，最初的名称是“广东法商学堂”</p>
+		<p style="color:midnightblue">6. 海淀种猪选育场</p>
+		<input id="answer6" type="text">
+		<button onclick="showHint('hint6')">tips</button>
+			<p id="hint6" style="display:none">这所大学还被称为“京城高校第一食堂”</p>
+		<p style="color:midnightblue">7. 宝山区落榜青年高复学院</p>
+		<input id="answer7" type="text">
+		<button onclick="showHint('hint7')">tips</button>
+			<p id="hint7" style="display:none">这所大学是上海人最看不起的大学</p>
+		<p style="color:midnightblue">8. 亚洲第一青年疗养院</p>
+		<input id="answer8" type="text">
+		<button onclick="showHint('hint8')">tips</button>
+			<p id="hint8" style="display:none">这所大学还被称之为“亚洲荷尔蒙大学”</p>
+		<p style="color:midnightblue">9. 八里台女子文理学院</p>
+		<input id="answer9" type="text">
+		<button onclick="showHint('hint9')">tips</button>
+			<p id="hint9" style="display:none">这所大学在天津有不输天津大学的名气</p>
+		<p style="color:midnightblue">10. 青岛水产基地</p>
+		<input id="answer10" type="text">
+		<button onclick="showHint('hint10')">tips</button>
+			<p id="hint10" style="display:none">这所大学因经常停水还被戏称“中国每羊大学”</p>
+
+	<p><button onclick="checkAnswers()">提交答案</button></p>
+	<p id="result"></p>
+</div>
+
+<!-- 加载 Bootstrap JS -->
+<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+	<script>
+	  document.body.style.backgroundColor = "#cce5ff";
+	  function showHint(hintId) {
+			var hint = document.getElementById(hintId);
+			hint.style.display = "block";
+		}
+
+		function checkAnswers() {
+			var answer1 = document.getElementById("answer1").value.toLowerCase();
+			var answer2 = document.getElementById("answer2").value.toLowerCase();
+			var answer3 = document.getElementById("answer3").value.toLowerCase();
+			var answer4 = document.getElementById("answer4").value.toLowerCase();
+			var answer5 = document.getElementById("answer5").value.toLowerCase();
+			var answer6 = document.getElementById("answer6").value.toLowerCase();
+			var answer7 = document.getElementById("answer7").value.toLowerCase();
+			var answer8 = document.getElementById("answer8").value.toLowerCase();
+			var answer9 = document.getElementById("answer9").value.toLowerCase();
+			var answer10 = document.getElementById("answer10").value.toLowerCase();
+
+			if (answer1 == "北京大学" && answer2 == "清华大学" && answer3 == "中国传媒大学" && answer4 == "同济大学" && answer5 == "中山大学" && answer6 =="中国农业大学" && answer7 == "上海大学" && answer8 == "北京体育大学" && answer9 == "南开大学" && answer10 == "中国海洋大学") {
+				document.getElementById("result").innerHTML = "恭喜你，回答正确！";
+			} else {
+				document.getElementById("result").innerHTML = "很遗憾，回答错误，请再试一次。";
+			}
+		}
+	</script>
+</body>
+</html>
